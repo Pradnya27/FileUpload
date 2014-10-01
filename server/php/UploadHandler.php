@@ -9,7 +9,7 @@
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
  */
-
+include 'config.php';
 class UploadHandler
 {
 
@@ -43,7 +43,7 @@ class UploadHandler
     function __construct($options = null, $initialize = true, $error_messages = null) {
         $this->options = array(
             'script_url' => $this->get_full_url().'/',
-            'upload_dir' => $_SERVER['DOCUMENT_ROOT'].'/upload1/',
+            'upload_dir' => UPLOAD,
             'upload_url' => $this->get_full_url().'/files/',
             'user_dirs' => false,
             'mkdir_mode' => 0755,
